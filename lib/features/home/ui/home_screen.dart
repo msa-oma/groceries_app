@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:grociries_app/core/util/app_colors.dart';
 import 'package:grociries_app/core/util/app_images.dart';
 import 'package:grociries_app/features/home/ui/widgets/custom_card_item.dart';
+import 'package:grociries_app/features/home/ui/widgets/custom_tile_item.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -112,14 +113,100 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                    height: 249,
-                    child: ListView.separated(
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) => const CustomCardItem(),
-                        separatorBuilder: (context, index) => const SizedBox(
-                              width: 8,
-                            ),
-                        itemCount: 4))
+                  height: 249,
+                  child: ListView.separated(
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) => const CustomCardItem(),
+                      separatorBuilder: (context, index) => const SizedBox(
+                            width: 8,
+                          ),
+                      itemCount: 4),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    const Expanded(
+                      child: Text(
+                        'best selling',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600, fontSize: 24),
+                      ),
+                    ),
+                    TextButton(
+                        onPressed: () {},
+                        child: const Text(
+                          'see all',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: AppColors.greenGrass),
+                        ))
+                  ],
+                ),
+                SizedBox(
+                  height: 249,
+                  child: ListView.separated(
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) => const CustomCardItem(),
+                      separatorBuilder: (context, index) => const SizedBox(
+                            width: 8,
+                          ),
+                      itemCount: 4),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    const Expanded(
+                      child: Text(
+                        'Groceries',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600, fontSize: 24),
+                      ),
+                    ),
+                    TextButton(
+                        onPressed: () {},
+                        child: const Text(
+                          'see all',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: AppColors.greenGrass),
+                        ))
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                SizedBox(
+                  height: 106,
+                  child: ListView.separated(
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) => const CustomTile(),
+                      separatorBuilder: (context, index) => const SizedBox(
+                            width: 8,
+                          ),
+                      itemCount: 4),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                SizedBox(
+                  height: 249,
+                  child: ListView.separated(
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) => const CustomCardItem(),
+                      separatorBuilder: (context, index) => const SizedBox(
+                            width: 8,
+                          ),
+                      itemCount: 4),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
               ],
             ),
           ),
