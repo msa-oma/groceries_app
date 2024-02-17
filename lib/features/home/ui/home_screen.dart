@@ -1,8 +1,8 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:grociries_app/core/util/app_colors.dart';
 import 'package:grociries_app/core/util/app_images.dart';
+import 'package:grociries_app/core/widgets/custom_image_widget.dart';
 import 'package:grociries_app/features/home/ui/widgets/custom_card_item.dart';
 import 'package:grociries_app/features/home/ui/widgets/custom_tile_item.dart';
 
@@ -19,20 +19,6 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Chip(
-                    label: const Text("msa "),
-                    deleteIcon: const Icon(Icons.cancel_outlined),
-                    deleteIconColor: Colors.white,
-
-                    // avatar: const Icon(Icons.cancel_outlined),
-                    onDeleted: () {
-                      var snackBar = SnackBar(
-                          content: const Text("deleted"),
-                          backgroundColor: Colors.red.withOpacity(0.5));
-
-                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                    },
-                    backgroundColor: Colors.black.withOpacity(0.5)),
                 Image.asset(
                   AppImages.carrotWithOrangeColorImage,
                   width: 50,
@@ -75,14 +61,9 @@ class HomeScreen extends StatelessWidget {
                     autoplay: true,
                     duration: 1000,
                     itemCount: 3,
-                    itemBuilder: (context, index) => CachedNetworkImage(
-                      imageUrl:
-                          "https://img.freepik.com/free-vector/watercolor-food-facebook-cover_23-2149175710.jpg",
-                      placeholder: (context, url) =>
-                          const Center(child: CircularProgressIndicator()),
-                      errorWidget: (context, url, error) =>
-                          const Icon(Icons.error),
-                    ),
+                    itemBuilder: (context, index) => const CustomImageWidget(
+                        imageUrl:
+                            "https://img.freepik.com/free-vector/watercolor-food-facebook-cover_23-2149175710.jpg"),
                     pagination: const SwiperPagination(
                         margin: EdgeInsets.all(2),
                         alignment: Alignment.bottomCenter,

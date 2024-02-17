@@ -11,6 +11,7 @@ dependencies:
   card_swiper: ^3.0.1
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.4
   flutter_svg: ^2.0.9
   gap: ^3.0.1
   google_fonts: ^6.1.0
@@ -26,11 +27,11 @@ flutter:
   assets:
     - assets/images/
     - assets/svgs/
-    - 
+     
   fonts:
-    - family: Gilroy
-      fonts:
-        - asset: assets/fonts/Gilroy-Regular.ttf
-        - asset: assets/fonts/Gilroy-Bold.ttf
-        - asset: assets/fonts/Gilroy-Medium.ttf
+   - family: Gilroy
+     fonts:
+       - asset: assets/fonts/Gilroy-Regular.ttf
+       - asset: assets/fonts/Gilroy-Bold.ttf
+       - asset: assets/fonts/Gilroy-Medium.ttf
  

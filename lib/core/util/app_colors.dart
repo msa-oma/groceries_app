@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
+  static const Color kFontColor = Color(0xff181725);
+  static const Color kHintColor = Color(0xff7C7C7C);
+
   static const Color whiteLightCreamy = Color(0xffFFF9FF); //button text color
   static const Color grayOffWhite = Color(0xffFCFCFC); //ivory color
   static const Color grayishwhite = Color(0xffF2F3F2); //search filed bg color

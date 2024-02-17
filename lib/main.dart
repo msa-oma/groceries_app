@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'features/product/ui/single_product_screen.dart';
 import 'features/splash/ui/splash_screen.dart';
 
 void main() {
@@ -16,6 +17,6 @@ class MainApp extends StatelessWidget {
         theme: ThemeData(
           useMaterial3: true,
         ),
-        home: const SplashScreen());
+        home: const SingleProductScreen());
   }
 }
